@@ -9,6 +9,20 @@ public class registrationTest {
         StudentRegSys regSys = new StudentRegSys();
         Student student1 = new Student("Steve", 20, new DateTime(2002, 1, 1, 0, 0), 123456);
         regSys.registerStudent(student1, "CS&IT");
+        for (Course course : regSys.getCourses()){
+
+            System.out.println("Course Name = " + course.getName());
+            System.out.println("Course Modules = " + course.getModules());
+            System.out.println("----------------------------------------");
+        }
+        System.out.println("\n\n");
+        for (Student student : regSys.getStudents()) {
+            System.out.println("Student Name = " + student.getName());
+            System.out.println("Student Username = " + student.getUsername());
+            System.out.println("Student Modules = " + student.getModules());
+            System.out.println("Student Course = " + student.getCourse());
+            System.out.println("----------------------------------------");
+        }
         Assertions.assertEquals("CS&IT", student1.getCourse().getName());
     }
 

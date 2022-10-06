@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class StudentRegSys {
     private final ArrayList<Course> courses;
     private final ArrayList<Module> modules;
+
+    private ArrayList<Student> students;
     public StudentRegSys(){
         Lecturer lecturer1 = new Lecturer("Bob", 32, new DateTime(1990, 1, 1, 0, 0), 123456);
         Lecturer lecturer2 = new Lecturer("Alice", 35, new DateTime(1987, 1, 1, 0, 0), 123456);
@@ -34,6 +36,8 @@ public class StudentRegSys {
         courses = new ArrayList<>();
         courses.add(eng);
         courses.add(compSci);
+
+        students = new ArrayList<>();
     }
 
     public void registerStudent(Student student, String courseName){
@@ -42,6 +46,7 @@ public class StudentRegSys {
                 student.setCourse(course);
                 student.setModules(course.getModules());
                 course.addStudent(student);
+                students.add(student);
             }
         }
     }
@@ -52,5 +57,13 @@ public class StudentRegSys {
                 m.addStudent(student);
             }
         }
+    }
+
+    public ArrayList<Course> getCourses(){
+        return courses;
+    }
+
+    public ArrayList<Student> getStudents(){
+        return students;
     }
 }
