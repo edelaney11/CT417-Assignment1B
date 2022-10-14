@@ -1,11 +1,22 @@
 import org.joda.time.DateTime;
 import java.util.ArrayList;
 
+/**
+ * Student Registration System
+ * Designed to allow for students to register for modules and courses
+ * Created by Ethan Delaney for Assignment 1 of CT417.
+ */
 public class StudentRegSys {
     private final ArrayList<Course> courses;
     private final ArrayList<Module> modules;
 
     private ArrayList<Student> students;
+
+    /**
+     * Constructor for StudentRegSys class
+     * This assumes that the courses and modules are already created, with lecturers associated with each module
+     * This system can then be used to add students to the system, and assign them to courses and modules
+     */
     public StudentRegSys(){
         Lecturer lecturer1 = new Lecturer("Bob", 32, new DateTime(1990, 1, 1, 0, 0), 123456);
         Lecturer lecturer2 = new Lecturer("Alice", 35, new DateTime(1987, 1, 1, 0, 0), 123456);
@@ -24,8 +35,8 @@ public class StudentRegSys {
         engModules.add(module3);
         engModules.add(module4);
         //Initialise compSci, with list of modules included
-        Course compSci = new Course("CS&IT", compSciModules, new DateTime(2020, 9, 1, 0, 0), new DateTime(2021, 5, 1, 0, 0));
-        Course eng = new Course("Engineering", engModules, new DateTime(2020, 9, 1, 0, 0), new DateTime(2021, 5, 1, 0, 0));
+        final Course compSci = new Course("CS&IT", compSciModules, new DateTime(2020, 9, 1, 0, 0), new DateTime(2021, 5, 1, 0, 0));
+        final Course eng = new Course("Engineering", engModules, new DateTime(2020, 9, 1, 0, 0), new DateTime(2021, 5, 1, 0, 0));
 
         modules = new ArrayList<>();
         modules.add(module1);
@@ -40,30 +51,81 @@ public class StudentRegSys {
         students = new ArrayList<>();
     }
 
+    /**
+     * Add a student to the system, and register them for the selected course
+     * @param student Student to be added
+     */
     public void registerStudent(Student student, String courseName){
         for(Course course : courses){
             if(course.getName().equals(courseName)){
-                student.setCourse(course);
-                student.setModules(course.getModules());
-                course.addStudent(student);
-                students.add(student);
+                students.add(student); //Add student to the system
+                student.setCourse(course); //Set the students course
+                student.setModules(course.getModules()); //Set their modules
+                course.addStudent(student); //Add student to the course
+                break;
             }
+            System.out.println("Invalid course name");
         }
     }
 
+    /**
+     * Add student to individual module (i.e. for optional modules)
+     * @param student Student to be added
+     * @param moduleName Module to add student to
+     */
     public void addStudentToModule(Student student, String moduleName){
         for(Module m : modules){
             if(m.getName().equals(moduleName)){
                 m.addStudent(student);
+                student.addModule(m);
             }
         }
     }
 
+    /**
+     * Get the list of courses
+     * @return List of courses
+     */
     public ArrayList<Course> getCourses(){
         return courses;
     }
 
+    /**
+     * Get list of students
+     * @return List of students
+     */
     public ArrayList<Student> getStudents(){
         return students;
+    }
+
+    /**
+     * Get list of modules
+     * @return List of modules
+     */
+    public ArrayList<Module> getModules(){
+        return modules;
+    }
+
+    /**
+     * Method to print out the current state of the registration system, with info about all the courses,
+     * all of the students, and all of the courses on the system.
+     * @return a String representation of the system
+     */
+    public String toString(){
+        String output = "";
+        for (Course course : getCourses()){
+            output = output.concat("Course Name = " + course.getName() + "\n");
+            output = output.concat("Course Modules = " + course.getModules() + "\n");
+            output = output.concat("----------------------------------------\n");
+        }
+        output = output.concat("\n\n");
+        for (Student student : getStudents()) {
+            output = output.concat("Student Name = " + student.getName() + "\n");
+            output = output.concat("Student Username = " + student.getUsername() + "\n");
+            output = output.concat("Student Modules = " + student.getModules() + "\n");
+            output = output.concat("Student Course = " + student.getCourse() + "\n");
+            output = output.concat("----------------------------------------\n");
+        }
+        return output;
     }
 }

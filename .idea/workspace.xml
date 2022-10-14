@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b860b13c-edcb-4d6c-9e97-4d0a85146dc1" name="Changes" comment="Added another test, and altered addStudentToModule method to accept a string as an argument">
+    <list default="true" id="b860b13c-edcb-4d6c-9e97-4d0a85146dc1" name="Changes" comment="Added print statements to JUnit tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StudentRegSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentRegSys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/registrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/registrationTest.java" afterDir="false" />
     </list>
@@ -31,6 +32,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Assignment1B" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Assignment1B" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Assignment1B" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -69,7 +81,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.registrationTest.testRegistration">
+  <component name="RunManager" selected="Gradle.registrationTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Assignment1B.main" />
@@ -94,6 +106,29 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="registrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true" show_console_on_std_out="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;registrationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -146,6 +181,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.registrationTest" />
         <item itemvalue="Gradle.registrationTest.testRegistration" />
         <item itemvalue="Gradle.registrationTest.testAddStudentToModule" />
         <item itemvalue="Application.Main" />
@@ -190,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665077717427</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added print statements to JUnit tests">
+      <created>1665078745512</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665078745512</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +252,7 @@
     <MESSAGE value="Improved method, with more lecturers and students" />
     <MESSAGE value="Added registration methods, and added JUnit test for this" />
     <MESSAGE value="Added another test, and altered addStudentToModule method to accept a string as an argument" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added another test, and altered addStudentToModule method to accept a string as an argument" />
+    <MESSAGE value="Added print statements to JUnit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added print statements to JUnit tests" />
   </component>
 </project>
