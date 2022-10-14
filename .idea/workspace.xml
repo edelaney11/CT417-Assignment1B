@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b860b13c-edcb-4d6c-9e97-4d0a85146dc1" name="Changes" comment="Added print statements to JUnit tests">
+    <list default="true" id="b860b13c-edcb-4d6c-9e97-4d0a85146dc1" name="Changes" comment="Updated print statements, and added more comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StudentRegSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentRegSys.java" afterDir="false" />
@@ -233,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665078745512</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated print statements, and added more comments">
+      <created>1665752958733</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665752958733</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +260,7 @@
     <MESSAGE value="Added registration methods, and added JUnit test for this" />
     <MESSAGE value="Added another test, and altered addStudentToModule method to accept a string as an argument" />
     <MESSAGE value="Added print statements to JUnit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added print statements to JUnit tests" />
+    <MESSAGE value="Updated print statements, and added more comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated print statements, and added more comments" />
   </component>
 </project>
