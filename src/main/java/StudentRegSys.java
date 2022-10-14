@@ -9,8 +9,9 @@ import java.util.ArrayList;
 public class StudentRegSys {
     private final ArrayList<Course> courses;
     private final ArrayList<Module> modules;
+    private final ArrayList<Student> students;
 
-    private ArrayList<Student> students;
+    private final ArrayList<Lecturer> lecturers;
 
     /**
      * Constructor for StudentRegSys class
@@ -22,6 +23,11 @@ public class StudentRegSys {
         Lecturer lecturer2 = new Lecturer("Alice", 35, new DateTime(1987, 1, 1, 0, 0), 123456);
         Lecturer lecturer3 = new Lecturer("Fearghal", 40, new DateTime(1982, 1, 1, 0, 0), 123456);
         Lecturer lecturer4 = new Lecturer("Brian", 45, new DateTime(1977, 1, 1, 0, 0), 123456);
+        lecturers = new ArrayList<>();
+        lecturers.add(lecturer1);
+        lecturers.add(lecturer2);
+        lecturers.add(lecturer3);
+        lecturers.add(lecturer4);
 
         ArrayList<Module> compSciModules = new ArrayList<>(); //Module array initialised
         ArrayList<Module> engModules = new ArrayList<>();
@@ -107,23 +113,39 @@ public class StudentRegSys {
     }
 
     /**
+     * Get list of lecturers
+     * @return List of lecturers
+     */
+    public ArrayList<Lecturer> getLecturers() {
+        return lecturers;
+    }
+
+    /**
      * Method to print out the current state of the registration system, with info about all the courses,
      * all of the students, and all of the courses on the system.
      * @return a String representation of the system
      */
     public String toString(){
-        String output = "";
+        String output = "Courses:\n";
         for (Course course : getCourses()){
             output = output.concat("Course Name = " + course.getName() + "\n");
             output = output.concat("Course Modules = " + course.getModules() + "\n");
             output = output.concat("----------------------------------------\n");
         }
         output = output.concat("\n");
+        output = output.concat("Students:\n");
         for (Student student : getStudents()) {
             output = output.concat("Student Name = " + student.getName() + "\n");
             output = output.concat("Student Username = " + student.getUsername() + "\n");
             output = output.concat("Student Modules = " + student.getModules() + "\n");
             output = output.concat("Student Course = " + student.getCourse() + "\n");
+            output = output.concat("----------------------------------------\n");
+        }
+        output = output.concat("\n");
+        output = output.concat("Lecturers:\n");
+        for (Lecturer lecturer : getLecturers()){
+            output = output.concat("Lecturer Name = " + lecturer.getName() + "\n");
+            output = output.concat("Lecturer Modules = " + lecturer.getModules() + "\n");
             output = output.concat("----------------------------------------\n");
         }
         return output;
