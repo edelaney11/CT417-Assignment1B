@@ -14,6 +14,7 @@ public class registrationTest {
      */
     @Test
     public void testRegistration(){
+        System.out.println("Testing registration of student to course");
         regSys.registerStudent(student1, "CS&IT");
         regSys.registerStudent(student2, "Engineering");
         System.out.println(regSys);
@@ -26,6 +27,7 @@ public class registrationTest {
      */
     @Test
     public void testAddStudentToModule(){
+        System.out.println("Testing adding student to module");
         System.out.println(regSys);
         regSys.registerStudent(student3, "CS&IT");
         regSys.addStudentToModule(student3, "System on Chip Design");

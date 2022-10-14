@@ -62,10 +62,10 @@ public class StudentRegSys {
                 student.setCourse(course); //Set the students course
                 student.setModules(course.getModules()); //Set their modules
                 course.addStudent(student); //Add student to the course
-                break;
+                return;
             }
-            System.out.println("Invalid course name");
         }
+        System.out.println("Invalid course name");
     }
 
     /**
@@ -118,7 +118,7 @@ public class StudentRegSys {
             output = output.concat("Course Modules = " + course.getModules() + "\n");
             output = output.concat("----------------------------------------\n");
         }
-        output = output.concat("\n\n");
+        output = output.concat("\n");
         for (Student student : getStudents()) {
             output = output.concat("Student Name = " + student.getName() + "\n");
             output = output.concat("Student Username = " + student.getUsername() + "\n");
